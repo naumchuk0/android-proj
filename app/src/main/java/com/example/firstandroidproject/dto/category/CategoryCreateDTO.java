@@ -6,17 +6,16 @@ public class CategoryCreateDTO {
     private String name;
     private String description;
     private File image;
-
-    public void setImage(File image) {
-        this.image = image;
+    public String getName() {
+        return name;
     }
 
     public File getImage() {
         return image;
     }
 
-    public String getName() {
-        return name;
+    public void setImage(File image) {
+        this.image = image;
     }
 
     public void setName(String name) {

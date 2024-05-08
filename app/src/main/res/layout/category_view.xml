@@ -29,9 +29,9 @@
             tools:layout_editor_absoluteX="0dp">
 
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:id="@+id/categoryImage"
-                android:layout_width="140dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars" />
 

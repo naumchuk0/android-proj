@@ -6,6 +6,8 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.firstandroidproject.account.LoginActivity;
+import com.example.firstandroidproject.account.RegisterActivity;
 import com.example.firstandroidproject.category.CategoryCreateActivity;
 
 
@@ -30,6 +32,11 @@ public class BaseActivity extends AppCompatActivity {
         }
         if(select==R.id.m_register) {
             Intent intent = new Intent(BaseActivity.this, RegisterActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        if(select==R.id.m_login) {
+            Intent intent = new Intent(BaseActivity.this, LoginActivity.class);
             startActivity(intent);
             return true;
         }

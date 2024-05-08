@@ -22,7 +22,10 @@
             android:name=".category.CategoryCreateActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".account.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".account.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

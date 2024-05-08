@@ -10,14 +10,14 @@
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        tools:context=".category.CategoryCreateActivity">
+        tools:context=".account.RegisterActivity">
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
-            android:text="Додати категорію"
+            android:text="Login Form"
             android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -25,11 +25,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tlCategoryName"
+            android:id="@+id/tlEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="Назва"
+            android:hint="Email"
             app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -40,49 +40,30 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tlCategoryDescription"
+            android:id="@+id/tlPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="Опис"
-            app:layout_constraintTop_toBottomOf="@+id/tlCategoryName">
+            android:hint="Password"
+            app:layout_constraintTop_toBottomOf="@+id/tlEmail">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:gravity="start"
-                android:lines="5"
-                android:maxLines="10"/>
+                android:inputType="textCapSentences"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/placeholder_image"
-            android:scaleType="centerCrop"
-            android:adjustViewBounds="true"
-            app:layout_constraintTop_toBottomOf="@+id/tlCategoryDescription" />
-
         <Button
-            android:id="@+id/chooseImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choose Image"
-            android:onClick="chooseImage"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
-
-        <Button
-            android:id="@+id/btnCategoryCreate"
+            android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="34dp"
-            android:onClick="onClickCreateCategory"
-            android:text="Додати"
+            android:onClick="onClickLogin"
+            android:text="Login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chooseImageButton" />
+            app:layout_constraintTop_toBottomOf="@+id/tlPassword" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

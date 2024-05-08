@@ -9,6 +9,9 @@ public class CategoryItemDTO {
     private String name;
     private String description;
     private String image;
+    public int getId() {
+        return id;
+    }
 
     public String getImage() {
         return image;
@@ -16,10 +19,6 @@ public class CategoryItemDTO {
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public void setId(int id) {

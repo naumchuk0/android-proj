@@ -18,7 +18,8 @@ public class CategoryCardViewHolder extends RecyclerView.ViewHolder {
         categoryDescription = itemView.findViewById(R.id.categoryDescription);
         categoryImage = itemView.findViewById(R.id.categoryImage);
     }
-    public ImageView getCategoryImage() {return categoryImage; }
+
+    public ImageView getCategoryImage() { return categoryImage; }
 
     public TextView getCategoryName() {
         return categoryName;

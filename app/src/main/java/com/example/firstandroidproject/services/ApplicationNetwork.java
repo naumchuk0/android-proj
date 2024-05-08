@@ -1,6 +1,8 @@
 package com.example.firstandroidproject.services;
 
 import com.example.firstandroidproject.constants.Urls;
+import com.example.firstandroidproject.interceptors.JWTInterceptor;
+import com.example.firstandroidproject.network.AccountApi;
 import com.example.firstandroidproject.network.CategoriesApi;
 
 import okhttp3.OkHttpClient;
@@ -18,7 +20,7 @@ public class ApplicationNetwork {
         interceptor.setLevel( HttpLoggingInterceptor.Level.BODY );
 
         OkHttpClient.Builder client =  new  OkHttpClient.Builder ()
-                .addInterceptor(interceptor);
+                .addInterceptor(new JWTInterceptor());
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(Urls.BASE)
@@ -36,4 +38,5 @@ public class ApplicationNetwork {
     public CategoriesApi getCategoriesApi() {
         return retrofit.create(CategoriesApi.class);
     }
+    public AccountApi getAccountApi() {return retrofit.create(AccountApi.class);}
 }

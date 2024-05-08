@@ -13,6 +13,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.firstandroidproject.application.HomeApplication;
 import com.example.firstandroidproject.category.CategoryAdapter;
 import com.example.firstandroidproject.dto.category.CategoryItemDTO;
+import com.example.firstandroidproject.interceptors.JWTInterceptor;
 import com.example.firstandroidproject.services.ApplicationNetwork;
 
 import java.util.List;

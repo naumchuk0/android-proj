@@ -1,4 +1,5 @@
 package com.example.firstandroidproject.category;
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -9,10 +10,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.firstandroidproject.R;
 import com.example.firstandroidproject.dto.category.CategoryItemDTO;
 
+import java.io.FileInputStream;
 import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryCardViewHolder> {
@@ -35,7 +36,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryCardViewHolder
     public void onBindViewHolder(@NonNull CategoryCardViewHolder holder, int position) {
         if (items != null && position < items.size()) {
             CategoryItemDTO item = items.get(position);
-            holder.getCategoryImage().setImageURI(Uri.parse(item.getImage()));
+            //holder.getCategoryImage().setImageBitmap(b);
             holder.getCategoryName().setText(item.getName());
             holder.getCategoryDescription().setText(item.getDescription());
         }
